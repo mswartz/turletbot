@@ -45,7 +45,10 @@ if($token != 'U7HmTW2Hq7MLbi2sJ134Drle'){ #replace this with the token from your
 // // $url_to_check = "http://isitup.org/".$text.".json";
 
 // # Set up cURL
-$ch = curl_init("https://api.particle.io/v1/devices/events?access_token=d54a41f8ab8f2b1771e08378e463a1d9e5194de3");
+$ch = curl_init();
+
+// set url
+curl_setopt($ch, CURLOPT_URL, "https://api.particle.io/v1/devices/events?access_token=d54a41f8ab8f2b1771e08378e463a1d9e5194de3");
 
 // # Set up options for cURL
 // # We want to get the value back from our query
