@@ -70,7 +70,7 @@ $response_array = json_decode($ch_response,true);
 if($ch_response === FALSE){
 	# isitup.org could not be reached
 	$reply = "Turlet bot not responding. Beep poop.";
-}else{
+}else if{
 	if($response_array["status"] == "free"){
 		# Yay, the domain is up!
 		$reply = ":thumbsup: The bathroom is free!";
