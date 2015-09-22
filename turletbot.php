@@ -49,4 +49,4 @@ if($ch_response === FALSE){
 	}
 }
 
-echo ":thumbsup: works";
+echo $reply;
