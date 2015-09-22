@@ -35,10 +35,7 @@ USAGE
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "https://api.particle.io/v1/devices/events?access_token=d54a41f8ab8f2b1771e08378e463a1d9e5194de3");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
 $ch_response = curl_exec($ch);
-
-var_dump($ch_response);
 curl_close($ch);
 $response_array = json_decode($ch_response,true);
 
