@@ -43,9 +43,9 @@ if($ch_response === FALSE){
 	$reply = "Turlet bot not responding. Beep poop.";
 } else {
 	if($response_array["result"] == 0){
-		$reply = ":thumbsup: The bathroom is free!";
+		$reply = ":poop: Yes! Hurry!";
 	} else {
-		$reply = ":poo: The bathroom is occupied.";
+		$reply = ":thumbsdown: Nope! Someone else is pooping.";
 	}
 }
 
