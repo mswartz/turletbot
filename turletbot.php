@@ -32,21 +32,21 @@ USAGE
 // 	echo $msg;
 // }
 
-// $ch = curl_init();
-// curl_setopt($ch, CURLOPT_URL, "https://api.particle.io/v1/devices/events?access_token=d54a41f8ab8f2b1771e08378e463a1d9e5194de3");
-// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-// $ch_response = curl_exec($ch);
-// curl_close($ch);
-// $response_array = json_decode($ch_response,true);
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://api.particle.io/v1/devices/events?access_token=d54a41f8ab8f2b1771e08378e463a1d9e5194de3");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$ch_response = curl_exec($ch);
+curl_close($ch);
+$response_array = json_decode($ch_response,true);
 
-// if($ch_response === FALSE){
-// 	$reply = "Turlet bot not responding. Beep poop.";
-// }else{
-// 	if($response_array["status"] == "free"){
-// 		$reply = ":thumbsup: The bathroom is free!";
-// 	} else ($response_array["status"] == "occupied"){
-// 		$reply = ":poo: The bathroom is occupied.";
-// 	}
-// }
+if($ch_response === FALSE){
+	$reply = "Turlet bot not responding. Beep poop.";
+}else{
+	if($response_array["status"] == "free"){
+		$reply = ":thumbsup: The bathroom is free!";
+	} else ($response_array["status"] == "occupied"){
+		$reply = ":poo: The bathroom is occupied.";
+	}
+}
 
 echo ":thumbsup: works";
