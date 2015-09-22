@@ -33,7 +33,7 @@ USAGE
 // }
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "https://api.particle.io/v1/devices/events?access_token=d54a41f8ab8f2b1771e08378e463a1d9e5194de3");
+curl_setopt($ch, CURLOPT_URL, "https://api.particle.io/v1/devices/1a002f000447343337373738/status?access_token=c95ac2d07af299fb579aefbd316fd6ee14aa7ae4");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $ch_response = curl_exec($ch);
 curl_close($ch);
@@ -42,7 +42,7 @@ $response_array = json_decode($ch_response,true);
 if($ch_response === FALSE){
 	$reply = "Turlet bot not responding. Beep poop.";
 } else {
-	if($response_array["status"] == "free"){
+	if($response_array["result"] == 0){
 		$reply = ":thumbsup: The bathroom is free!";
 	} else {
 		$reply = ":poo: The bathroom is occupied.";
